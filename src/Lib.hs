@@ -3,7 +3,13 @@ module Lib
     ) where
 
 someFunc :: IO ()
-someFunc = interact dialog
+someFunc = interactLoop
+
+interactLoop :: IO ()
+interactLoop = do
+  input <- getLine
+  putStrLn $ dialog input
+  interactLoop
 
 dialog :: String -> String 
 dialog msg = "Hello " ++ msg
