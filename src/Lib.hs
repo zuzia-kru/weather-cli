@@ -1,9 +1,6 @@
 module Lib
-    ( someFunc
+    ( interactLoop
     ) where
-
-someFunc :: IO ()
-someFunc = interactLoop
 
 interactLoop :: IO ()
 interactLoop = do
